@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shree Khasthbhajan Caterers in Virar East, Maharashtra. South Indian, traditional, wedding, birthday and custom-menu catering. Contact us on WhatsApp for bookings.">
+  <meta name="theme-color" content="#4b0710">
+  <title>Shree Khasthbhajan Caterers | Virar East</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --maroon: #4b0710;
+      --maroon-dark: #29040a;
+      --maroon-light: #711626;
+      --gold: #d9ad58;
+      --gold-light: #f5dfaa;
+      --cream: #fff9ef;
+      --ink: #2b1717;
+      --muted: #705d58;
+      --white: #fff;
+      --shadow: 0 14px 36px rgba(59, 12, 17, .12);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { margin: 0; font-family: "DM Sans", sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1120px, calc(100% - 36px)); margin-inline: auto; }
+    .topbar { background: var(--maroon-dark); color: #f9e9c8; font-size: .84rem; padding: 8px 0; }
+    .topbar .container { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(75,7,16,.97); color: var(--white); border-bottom: 1px solid rgba(217,173,88,.4); backdrop-filter: blur(12px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-mark { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid var(--gold); color: var(--gold-light); border-radius: 50%; font-size: 1.45rem; flex: 0 0 auto; }
+    .brand-name { font-family: "Playfair Display", serif; font-size: clamp(1rem, 2.3vw, 1.32rem); line-height: 1.15; color: var(--gold-light); }
+    .brand-name small { display: block; letter-spacing: .22em; font-family: "DM Sans", sans-serif; font-size: .63rem; margin-top: 4px; }
+    .nav-links { display: flex; align-items: center; gap: 22px; font-size: .91rem; }
+    .nav-links a:not(.btn):hover { color: var(--gold-light); }
+    .menu-toggle { display: none; color: white; background: transparent; border: 1px solid #9b6b55; border-radius: 10px; padding: 8px 11px; font-size: 1.2rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 19px; border-radius: 999px; border: 1px solid transparent; font: inherit; font-weight: 700; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 9px 22px rgba(0,0,0,.15); }
+    .btn-gold { background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #3a1010; }
+    .btn-outline { border-color: var(--maroon); color: var(--maroon); background: transparent; }
+    .btn-green { background: #16864b; color: white; }
+    .hero { color: white; position: relative; overflow: hidden; background: var(--maroon-dark); }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(39,3,9,.96) 0%, rgba(64,5,15,.88) 48%, rgba(64,5,15,.18) 100%), url("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1900&q=85") center/cover; }
+    .hero::after { content: ""; position: absolute; width: 320px; height: 320px; border: 1px solid rgba(217,173,88,.3); border-radius: 50%; right: -140px; bottom: -190px; box-shadow: 0 0 0 30px rgba(217,173,88,.05), 0 0 0 60px rgba(217,173,88,.04); }
+    .hero-content { position: relative; z-index: 1; padding: clamp(72px, 10vw, 126px) 0 92px; max-width: 730px; }
+    .eyebrow { color: var(--gold-light); text-transform: uppercase; letter-spacing: .2em; font-weight: 700; font-size: .78rem; }
+    h1, h2, h3 { font-family: "Playfair Display", serif; line-height: 1.15; }
+    h1 { font-size: clamp(2.5rem, 6vw, 5.15rem); margin: 16px 0; letter-spacing: -.035em; }
+    h1 span { color: var(--gold-light); }
+    .hero p { max-width: 580px; color: #f7e9dc; font-size: clamp(1rem, 2vw, 1.14rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .hero-tags span { border: 1px solid rgba(245,223,170,.38); color: #fff1d3; padding: 7px 12px; border-radius: 999px; font-size: .84rem; background: rgba(255,255,255,.05); }
+    section { padding: 82px 0; }
+    .section-head { text-align: center; max-width: 690px; margin: 0 auto 38px; }
+    .section-head .eyebrow { color: #9b6b23; }
+    h2 { color: var(--maroon); font-size: clamp(2rem, 4vw, 3rem); margin: 10px 0 13px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+    .about-copy h2 { margin-top: 8px; }
+    .about-copy p { color: var(--muted); }
+    .about-image { min-height: 360px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); position: relative; }
+    .about-image img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+    .image-note { position: absolute; left: 18px; right: 18px; bottom: 18px; background: rgba(41,4,10,.88); color: #fff2d4; border: 1px solid rgba(217,173,88,.55); border-radius: 14px; padding: 14px 17px; }
+    .image-note strong { display: block; color: var(--gold-light); font-family: "Playfair Display", serif; font-size: 1.1rem; }
+    .services { background: #f8eddb; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service-card { background: #fffdf8; border: 1px solid #efdfc5; border-radius: var(--radius); overflow: hidden; box-shadow: 0 8px 22px rgba(74,30,20,.06); transition: transform .25s, box-shadow .25s; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .service-card img { height: 210px; width: 100%; object-fit: cover; }
+    .service-body { padding: 22px; }
+    .service-icon { font-size: 1.4rem; }
+    .service-body h3 { font-size: 1.35rem; color: var(--maroon); margin: 9px 0; }
+    .service-body p { color: var(--muted); font-size: .94rem; margin-bottom: 0; }
+    .highlight { color: var(--maroon); font-weight: 700; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .gallery-grid a { display: block; overflow: hidden; border-radius: 16px; min-height: 190px; background: #ead8b8; }
+    .gallery-grid img { width: 100%; height: 100%; min-height: 190px; object-fit: cover; transition: transform .4s; }
+    .gallery-grid a:hover img { transform: scale(1.07); }
+    .packages { background: var(--maroon); color: white; }
+    .packages h2 { color: var(--gold-light); }
+    .packages .section-head p { color: #ead9ce; }
+    .package-panel { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .package { padding: 26px; border: 1px solid rgba(217,173,88,.4); border-radius: var(--radius); background: rgba(255,255,255,.045); }
+    .package .number { color: var(--gold); font-size: .8rem; letter-spacing: .16em; font-weight: 700; }
+    .package h3 { color: var(--gold-light); font-size: 1.35rem; }
+    .package p { color: #f0dfd6; font-size: .94rem; }
+    .package small { color: #e7cfa9; }
+    .booking-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 35px; align-items: start; }
+    .contact-card { background: #fff; border: 1px solid #f0dfc5; border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+    .contact-row { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #f0e7db; }
+    .contact-row:last-child { border-bottom: 0; }
+    .contact-icon { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; flex: 0 0 auto; background: #f8ecd5; color: var(--maroon); font-size: 1.1rem; }
+    .contact-row strong { display: block; color: var(--maroon); }
+    .contact-row span, .contact-row a { color: var(--muted); overflow-wrap: anywhere; }
+    form { display: grid; gap: 15px; }
+    label { font-weight: 700; font-size: .9rem; color: var(--maroon); }
+    input, select, textarea { width: 100%; margin-top: 6px; border: 1px solid #dfcdb7; border-radius: 12px; padding: 13px 14px; font: inherit; background: #fffdf9; color: var(--ink); outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: #a66b23; box-shadow: 0 0 0 3px rgba(217,173,88,.18); }
+    textarea { min-height: 110px; resize: vertical; }
+    .form-note { color: var(--muted); font-size: .82rem; margin: 0; }
+    .cta-strip { background: #f6e6c9; padding: 30px 0; }
+    .cta-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .cta-inner h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin: 0 0 5px; }
+    .cta-inner p { margin: 0; color: var(--muted); }
+    footer { background: var(--maroon-dark); color: #f8e9d1; padding: 36px 0 22px; }
+    .footer-main { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; padding-bottom: 24px; border-bottom: 1px solid rgba(217,173,88,.25); }
+    footer .brand-name { color: var(--gold-light); }
+    footer p { color: #d9c4b5; max-width: 430px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    .footer-links a:hover { color: var(--gold-light); }
+    .copyright { text-align: center; color: #c6aa9b; font-size: .8rem; padding-top: 18px; }
+    .floating-wa { position: fixed; right: 18px; bottom: 18px; z-index: 25; box-shadow: 0 8px 24px rgba(0,0,0,.22); }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .toast { position: fixed; left: 50%; bottom: 22px; transform: translate(-50%, 150%); background: #221010; color: white; padding: 12px 18px; border-radius: 12px; z-index: 50; transition: transform .25s; box-shadow: var(--shadow); }
+    .toast.show { transform: translate(-50%, 0); }
+    @media (max-width: 850px) {
+      .nav-links { gap: 13px; font-size: .83rem; }
+      .nav-links .btn { padding: 10px 12px; }
+      .about-grid, .booking-grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: repeat(2,1fr); }
+      .package-panel { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 650px) {
+      .topbar .container { justify-content: center; text-align: center; }
+      .nav { min-height: 68px; }
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 18px; background: var(--maroon-dark); flex-direction: column; align-items: stretch; gap: 5px; border-bottom: 1px solid rgba(217,173,88,.4); }
+      .nav-links.open { display: flex; }
+      .nav-links a:not(.btn) { padding: 10px 8px; }
+      .nav-links .btn { margin-top: 8px; }
+      .brand-mark { width: 40px; height: 40px; }
+      .hero-bg { background-position: 62% center; background-image: linear-gradient(90deg, rgba(39,3,9,.96), rgba(64,5,15,.75)), url("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1100&q=80"); }
+      .hero-content { padding: 74px 0 76px; }
+      section { padding: 62px 0; }
+      .cards { grid-template-columns: 1fr; }
+      .service-card img { height: 230px; }
+      .gallery-grid a, .gallery-grid img { min-height: 145px; }
+      .cta-inner { align-items: flex-start; flex-direction: column; }
+      .floating-wa { right: 12px; bottom: 12px; padding: 12px 15px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>✦ Delicious Food • Traditional Taste • Memorable Moments</span>
+      <span>📍 Virar East, Maharashtra</span>
+    </div>
+  </div>
+
+  <header>
+    <nav class="container nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Shree Khasthbhajan Caterers home">
+        <span class="brand-mark" aria-hidden="true">♨</span>
+        <span class="brand-name">Shree Khasthbhajan<small>C A T E R E R S</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#packages">Packages</a><a href="#contact">Contact</a>
+        <a class="btn btn-gold" href="https://wa.me/917977356940?text=Hello%20Shree%20Khasthbhajan%20Caterers%2C%20I%20want%20to%20enquire%20about%20catering." target="_blank" rel="noopener">☏ Book on WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="eyebrow">🟢 100% Pure Vegetarian • A taste of tradition, served with love</div>
+        <h1>Every Occasion<br>Deserves <span>Great Food.</span></h1>
+        <p>Make your special moments unforgettable with delicious catering, thoughtful service and menus tailored to your celebration.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contact">Plan Your Event <span aria-hidden="true">→</span></a>
+          <a class="btn" style="border-color:rgba(255,255,255,.65);color:white" href="#services">Explore Our Services</a>
+        </div>
+        <div class="hero-tags"><span>✦ South Indian</span><span>✦ Traditional</span><span>✦ Weddings</span><span>✦ Birthdays & Engagements</span></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <div class="eyebrow">Welcome to our table</div>
+          <h2>Good Food Brings People Together</h2>
+          <p><strong>Shree Khasthbhajan Caterers</strong> serves Virar East and surrounding areas with 100% pure vegetarian catering for family celebrations and special occasions. From South Indian favourites to traditional dishes, we aim to make every gathering warm, tasty and memorable.</p>
+          <p>Tell us about your event, guest count and food preferences. We’ll discuss a menu that suits your occasion and budget.</p>
+          <a class="btn btn-outline" href="#contact">Tell Us About Your Event →</a>
+        </div>
+        <div class="about-image reveal">
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1000&q=85" alt="A colourful spread of freshly prepared food" loading="lazy">
+          <div class="image-note"><strong>Made for your moments</strong>Food, hospitality and celebrations—planned around you.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">What we serve</div>
+          <h2>Catering for Every Celebration</h2>
+          <p>Choose a service or ask us for a custom menu designed around your event.</p>
+        </div>
+        <div class="cards">
+          <article class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=850&q=80" alt="Traditional South Indian meal served on a plate" loading="lazy">
+            <div class="service-body"><div class="service-icon">🍃</div><h3>South Indian Catering</h3><p>Comforting South Indian favourites and meal options for family events and gatherings.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=850&q=80" alt="Variety of colourful traditional dishes" loading="lazy">
+            <div class="service-body"><div class="service-icon">🥘</div><h3>Traditional Catering</h3><p>Traditional flavours and a menu planned to suit your family’s preferences and occasion.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=850&q=80" alt="Decorated wedding celebration venue" loading="lazy">
+            <div class="service-body"><div class="service-icon">💍</div><h3>Wedding Catering</h3><p>Food planning for weddings and related celebrations, with details discussed in advance.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=850&q=80" alt="Celebration cake for a birthday party" loading="lazy">
+            <div class="service-body"><div class="service-icon">🎂</div><h3>Birthday & Engagement</h3><p>Make birthdays, engagements and milestone moments extra special with catering.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=850&q=80" alt="Freshly prepared dishes for a custom menu" loading="lazy">
+            <div class="service-body"><div class="service-icon">✨</div><h3>Custom Menu</h3><p>Share your food preferences, guest count and budget so we can discuss a suitable menu.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=850&q=80" alt="Catered food arranged for an event" loading="lazy">
+            <div class="service-body"><div class="service-icon">🤝</div><h3>Personalised Planning</h3><p>Let us know the date, venue and type of event to begin planning your catering enquiry.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">A little inspiration</div>
+          <h2>Food & Celebration Gallery</h2>
+          <p>Explore a few food and event inspirations. Replace these sample photos with your own catering photos for the best results.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <a href="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="South Indian meal inspiration" loading="lazy"></a>
+          <a href="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=85" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Catering buffet setup inspiration" loading="lazy"></a>
+          <a href="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=85" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Wedding celebration inspiration" loading="lazy"></a>
+          <a href="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1200&q=85" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80" alt="Birthday cake inspiration" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages" id="packages">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Flexible options</div>
+          <h2>Let’s Plan Your Menu</h2>
+          <p>Every event is different, so we discuss the menu and quote based on your requirements.</p>
+        </div>
+        <div class="package-panel">
+          <article class="package reveal"><div class="number">01 / FAMILY</div><h3>Family Gatherings</h3><p>For birthdays, small celebrations and get-togethers. Share the date, guest count and food preferences.</p><small>Menu and quote on enquiry</small></article>
+          <article class="package reveal"><div class="number">02 / CELEBRATIONS</div><h3>Weddings & Engagements</h3><p>Discuss your event schedule, guest count, venue and preferred dishes with us.</p><small>Menu and quote on enquiry</small></article>
+          <article class="package reveal"><div class="number">03 / CUSTOM</div><h3>Made for Your Event</h3><p>Have a specific menu in mind? Tell us your needs and we can discuss suitable options.</p><small>Menu and quote on enquiry</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Let’s make it memorable</div>
+          <h2>Enquire About Your Event</h2>
+          <p>Fill in the details below. The form opens WhatsApp with your enquiry message ready to send.</p>
+        </div>
+        <div class="booking-grid">
+          <div class="contact-card reveal">
+            <h3 style="margin-top:0;color:var(--maroon);font-size:1.5rem">Contact Details</h3>
+            <div class="contact-row"><div class="contact-icon">☎</div><div><strong>Call / WhatsApp</strong><a href="tel:+917977356940">+91 79773 56940</a></div></div>
+            <div class="contact-row"><div class="contact-icon">✉</div><div><strong>Email</strong><a href="mailto:shreekhashtbhanjancaterers@gmail.com">shreekhashtbhanjancaterers@gmail.com</a></div></div>
+            <div class="contact-row"><div class="contact-icon">⌖</div><div><strong>Location</strong><span>Virar East, Maharashtra, India</span></div></div>
+            <div class="contact-row"><div class="contact-icon">◷</div><div><strong>Booking tip</strong><span>For the best planning, share your event date and approximate guest count.</span></div></div>
+            <a class="btn btn-green" style="width:100%;margin-top:14px" href="https://wa.me/917977356940?text=Hello%20Shree%20Khasthbhajan%20Caterers%2C%20I%20would%20like%20to%20enquire%20about%20catering." target="_blank" rel="noopener">☏ Chat on WhatsApp</a>
+          </div>
+          <div class="contact-card reveal">
+            <form id="bookingForm">
+              <label for="customerName">Your name
+                <input id="customerName" name="customerName" placeholder="Enter your name" required autocomplete="name">
+              </label>
+              <label for="eventType">Type of event
+                <select id="eventType" name="eventType" required>
+                  <option value="">Choose an event</option>
+                  <option>Wedding</option><option>Engagement</option><option>Birthday</option><option>Family function</option><option>Traditional function</option><option>Other / Custom</option>
+                </select>
+              </label>
+              <label for="eventDate">Event date
+                <input id="eventDate" name="eventDate" type="date">
+              </label>
+              <label for="guestCount">Approximate number of guests
+                <input id="guestCount" name="guestCount" type="number" min="1" placeholder="e.g. 100">
+              </label>
+              <label for="foodPreference">Food preference / menu details
+                <textarea id="foodPreference" name="foodPreference" placeholder="Tell us what kind of menu you are looking for"></textarea>
+              </label>
+              <button class="btn btn-gold" type="submit">Send Enquiry on WhatsApp →</button>
+              <p class="form-note">This form does not store your details on the website. It prepares a WhatsApp message for you to review and send.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-strip">
+      <div class="container cta-inner">
+        <div><h2>Planning something special?</h2><p>Let’s talk about food for your next celebration.</p></div>
+        <a class="btn btn-green" href="https://wa.me/917977356940?text=Hello%20Shree%20Khasthbhajan%20Caterers%2C%20I%20want%20to%20plan%20catering%20for%20an%20event." target="_blank" rel="noopener">☏ Book on WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="#home"><span class="brand-mark">♨</span><span class="brand-name">Shree Khasthbhajan<small>C A T E R E R S</small></span></a>
+          <p>100% pure vegetarian South Indian, traditional and custom catering for your special moments in Virar East, Maharashtra.</p>
+        </div>
+        <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><a href="mailto:shreekhashtbhanjancaterers@gmail.com">Email us</a></div>
+      </div>
+      <div class="copyright">© <span id="year"></span> Shree Khasthbhajan Caterers. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a class="btn btn-green floating-wa" href="https://wa.me/917977356940?text=Hello%20Shree%20Khasthbhajan%20Caterers%2C%20I%20want%20to%20enquire%20about%20catering." target="_blank" rel="noopener" aria-label="Book on WhatsApp">☏ WhatsApp</a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open menu');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    // Reveal sections as the visitor scrolls
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('visible'));
+    }
+
+    // Booking form creates a WhatsApp message; it does not send automatically
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const name = document.getElementById('customerName').value.trim();
+      const eventType = document.getElementById('eventType').value;
+      const eventDate = document.getElementById('eventDate').value || 'Not decided yet';
+      const guests = document.getElementById('guestCount').value || 'Not decided yet';
+      const food = document.getElementById('foodPreference').value.trim() || 'Would like to discuss menu options';
+      const message = `Hello Shree Khasthbhajan Caterers!%0A%0AI would like to enquire about catering.%0AName: ${encodeURIComponent(name)}%0AEvent: ${encodeURIComponent(eventType)}%0ADate: ${encodeURIComponent(eventDate)}%0AGuests: ${encodeURIComponent(guests)}%0AMenu/preferences: ${encodeURIComponent(food)}`;
+      window.open(`https://wa.me/917977356940?text=${message}`, '_blank', 'noopener');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
